@@ -1,0 +1,24 @@
+Tienen las siguientes máquinas:
+
+dist04.inf.santiago.usm.cl 10.6.40.194 (Servidor Central) 
+dist05.inf.santiago.usm.cl 10.6.40.195 (Cliente)
+dist06.inf.santiago.usm.cl 10.6.40.196 (Servidor Zona)
+
+login: root 
+pass: sDist00
+
+
+
+Disable Firewalld
+------------------------------
+systemctl disable firewalld
+
+
+Stop Firewalld
+------------------------------
+systemctl stop firewalld
+
+
+Check the Status of Firewalld
+------------------------------
+systemctl status firewalld
