@@ -46,8 +46,8 @@ public class ServidorCentral {
 			}
 		} // while
 		
-		ServidorCentral servidor = new ServidorCentral(info); 	// se guardan los datos de los servidores de zona
-															 	// en la instancia servidor de la clase ServidorCentral
+		ServidorCentral servidor = new ServidorCentral(info);
+		
 		try {
 			DatagramSocket server_socket = new DatagramSocket(8000);
 			
