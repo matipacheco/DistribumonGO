@@ -19,22 +19,22 @@ public class ServidorCentral {
 		HashMap<String, HashMap<String, String>> info = new HashMap<String, HashMap<String, String>>();
 
 		while (true){
-			System.out.println("Agregar servidor de zona? (s/n)");
+			System.out.println("[Servidor Central]: Agregar servidor de zona? (s/n)");
 			String input = sc.next();
 			
 			if ( input.equals("s")) {
 				HashMap<String, String> hash = new HashMap<String, String>();
 
-				System.out.println("Nombre:");
+				System.out.println("[Servidor Central]: Nombre (sin espacios):");
 				input = sc.next();
 				String nombre = input;
-				System.out.println("IP Multicast:");
+				System.out.println("[Servidor Central]: IP Multicast:");
 				input = sc.next();
 				hash.put("IP1", input);
-				System.out.println("IP Peticiones:");
+				System.out.println("[Servidor Central]: IP Peticiones:");
 				input = sc.next();
 				hash.put("IP2", input);
-				System.out.println("Puerto Peticiones:");
+				System.out.println("[Servidor Central]: Puerto Peticiones:");
 				input = sc.next();
 				hash.put("Puerto", input);
 
@@ -71,9 +71,9 @@ public class ServidorCentral {
 		                String respuesta = ip1 + " " + ip2 + " " + port;
 
 						System.out.println();
-						System.out.println("Respuesta a /" + peticion.getAddress().getHostAddress() + " por " + item);
-						System.out.println("Nombre: " + item);
-						System.out.println("IP Multicast: " + ip1 + ", IP Peticiones: " + ip2 +  ", Puerto Peticiones: " + port);
+						System.out.println("[Servidor Central]: Respuesta a /" + peticion.getAddress().getHostAddress() + " por " + item);
+						System.out.println("[Servidor Central]: Nombre: " + item);
+						System.out.println("[Servidor Central]: IP Multicast: " + ip1 + ", IP Peticiones: " + ip2 +  ", Puerto Peticiones: " + port);
 		               
 	                	DatagramPacket dp = new DatagramPacket(respuesta.getBytes() , respuesta.getBytes().length , peticion.getAddress() , peticion.getPort());
 		                server_socket.send(dp);
